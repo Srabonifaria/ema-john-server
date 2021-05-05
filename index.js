@@ -12,7 +12,7 @@ const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster
 app.use(bodyParser.json());
 app.use(cors());
 
-const port = 5000
+const port =process.env.PORT || 5000
 
 
 
@@ -63,4 +63,4 @@ app.post('/addOrder',(req, res)=>{
 });
 
 
-app.listen(process.env.PORT || port)
+app.listen(process.env.PORT ||port)
